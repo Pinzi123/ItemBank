@@ -1,0 +1,22 @@
+.subject-content{
+ width:100%;
+ height:100%;
+}
+.subject-content .topic{
+ width:auto;
+ margin-left:10%;
+  margin-right:10%;
+}
+.subject-content .topic p{
+	display:block;
+ width:100%;
+ line-height:30px;
+}
+
+.radio span {
+	margin-left : 10px;
+}
+
+.topic .checked{
+	border: 1px solid #00bc9b;
+}

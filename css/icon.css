@@ -1,0 +1,47 @@
+a,,span,div,li,ul,ol,p{
+	margin: 0;
+	padding: 0;
+}
+
+.radio{
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    display: inline-block;
+}
+.radio .icon{
+    border: 1px solid #DDD;
+    vertical-align: -3px;
+    width: 14px;
+    height: 14px;
+    background: #FFF;
+    display: inline-block;
+    margin-right: 3px;
+    border-radius: 2px;
+    line-height: normal;
+    position: relative;
+	border-radius: 50%;
+}
+
+.radio .selected {
+    color: #00bc9b;
+	border-color: #00bc9b;
+}
+
+.radio .checked {
+    color: #00bc9b;
+	border-color: #00bc9b;
+}
+
+.radio .selected:before {
+    border-radius: 50%;
+    background: #00bc9b;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
