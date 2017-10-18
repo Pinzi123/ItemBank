@@ -1,2 +1,2 @@
 # ItemBank
-### [题库显示](https://pinzi123.github.io/ItemBank/.)
+### [题库显示](https://Pinzi123.github.io/ItemBank/.)
