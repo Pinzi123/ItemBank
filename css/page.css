@@ -1,12 +1,10 @@
 .subject-content{
- width:100%;
- height:100%;
-}
-.subject-content .topic{
  width:auto;
+ height:auto;
  margin-left:10%;
-  margin-right:10%;
+ margin-right:10%;
 }
+
 .subject-content .topic p{
 	display:block;
  width:100%;
@@ -19,4 +17,47 @@
 
 .topic .checked{
 	border: 1px solid #00bc9b;
+}
+
+#pages span{
+display:inline-block;
+width:40px;
+height:40px;
+line-height:40px;
+text-align:center;
+font-size: 16px;
+color: #dce4ec;
+margin:20px 10px;
+}
+#pages .checked{
+    background: #59b59c;
+    color: #FFF;
+}
+#pages span:hover{
+	background: #59b59c;
+    color: #FFF;
+}
+.submit{
+	text-align:right;
+}
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    width: 110px;
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none 0;
+    cursor: pointer;
+    line-height: normal;
+    outline: 0;
+    white-space: nowrap;
+}
+.warning-btn {
+    background: #ff6547;
+    margin-right: 20px;
+}
+.btn-primary {
+    background: #00BC9B;
 }
