@@ -11,6 +11,7 @@
     filter:Alpha(opacity=70);
 	position:absolute;
 	top:0;
+	display:none
 }
 .subject-content{
  width:auto;
@@ -35,7 +36,7 @@
 .card{
     color: #dce4ec;
 }
-#pages span{
+.pages span{
     display:inline-block;
     width:40px;
     height:40px;
@@ -44,7 +45,7 @@
     font-size: 16px;
     margin:20px 10px;
 }
-#pages .checked{
+.pages .checked{
     background: #59b59c;
     color: #FFF;
 }
@@ -67,6 +68,7 @@
 	margin-left:10%;
     margin-right:10%;
 	border-radius: 5%;
+	display:none
 }
 .record .record-title{
 height:30px;
@@ -74,7 +76,7 @@ line-height:30px;
 margin-left:10px;
 margin-bottom:-10px;
 }
-#pages .warning{
+.pages .warning{
 	background: #ff6547;
 	color: #fff;
 }

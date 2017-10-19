@@ -18,9 +18,11 @@ window.onload = function () {
  var icons = document.getElementsByClassName('icon')
  var problem = document.getElementById('problem')
  var options = topic.getElementsByClassName('option')
- var pages = document.getElementById('pages')
+ var pages = document.getElementsByClassName('pages')[0]
  var pageSpan
  var submitDiv = document.getElementsByClassName('submit')[0].getElementsByTagName("div")
+ var record = document.getElementsByClassName('record')[0]
+ var hide = document.getElementsByClassName('hide')[0]
  var nowItem = 0
  var nowRadio = -1
  var itemNum = itemsA.length
@@ -65,12 +67,21 @@ window.onload = function () {
 			 nowItem = i
 		 }
 	 }
+	 
+	 if(nowItem < (itemNum-1)){
+		 submitDiv[1].innerHTML = '下一题'
+		 submitDiv[0].style.display = 'inline-block'
+	 }
+  })
+  
+  bindEvent(submitDiv[0], 'click', function(e) {
+	  showRecord();
   })
   
   bindEvent(submitDiv[1], 'click', function(e) {
 	  if(nowItem < (itemNum-1)){
 	    if(answer[nowItem]<0){
-		  removeClassName(pageSpan[i],' checked');
+		  removeClassName(pageSpan[nowItem],' checked');
 		 }
 	    nowItem = nowItem + 1
 	    resetTopic(nowItem,itemsA)
@@ -81,7 +92,7 @@ window.onload = function () {
 		}
 		
 	  } else {
-		  alert('等待算分！')
+		  showRecord();
 	  }
   })
   
@@ -125,6 +136,25 @@ window.onload = function () {
   function checked(node) {
 	 node.className = node.className + " checked"
   }
+  
+  //算分
+  function showRecord(){
+	  record.style.display = 'block'
+	  hide.style.display = 'block'
+	  var pages = document.getElementsByClassName('pages')[1]
+	  for(var i=0; i<itemNum; i++){
+		  var span = document.createElement("span");
+		  var node=document.createTextNode(i+1);
+		  if(answer[i] == itemsA.content[i].correct){
+			 span.className = 'checked' 
+			 console.log(answer[i])
+		  } else {
+			 span.className = 'warning' 
+		  }
+          span.appendChild(node);
+		  pages.appendChild(span);
+	  }
+  }
 }
 
 
@@ -132,7 +162,9 @@ window.onload = function () {
 
 // 移除类名
 function removeClassName(e, className){
-	e.className = e.className.replace(className,"")
+	if(e.className){
+	  e.className = e.className.replace(className,"")
+	}
 }
 // 添加类名
 function addClassName(e, className){
