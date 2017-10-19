@@ -20,13 +20,15 @@ window.onload = function () {
  var options = topic.getElementsByClassName('option')
  var pages = document.getElementById('pages')
  var pageSpan
- 
+ var submitDiv = document.getElementsByClassName('submit')[0].getElementsByTagName("div")
+ var nowItem = 0
+ var nowRadio = -1
+ var itemNum = itemsA.length
  // 渲染数据
- resetTopic(1,itemsA);
- resetPages(itemsA.length)
+ resetTopic(nowItem,itemsA);
+ resetPages(itemNum)
 
  // 绑定事件
- 
  bindEvent(topic, 'mouseover', 'radio', function(e){
 	 e.target.className = e.target.className + ' checked';
 	 e.target.getElementsByClassName('icon')[0].className = e.target.getElementsByClassName('icon')[0].className + ' checked';
@@ -38,18 +40,52 @@ window.onload = function () {
  })
  
  bindEvent(topic, 'click', 'radio', function(e){
+	 var nowselect = e.target.getElementsByClassName('icon')[0]
 	 for(var i = 0; i < icons.length; i++){
 		 removeClassName(icons[i],' selected');
+		 if(nowselect == icons[i]){
+			 nowRadio = i
+			 answer[nowItem] = nowRadio
+		 }
 	 }
-	  e.target.getElementsByClassName('icon')[0].className =  e.target.getElementsByClassName('icon')[0].className + ' selected';
+	  nowselect.className =  nowselect.className + ' selected';
+	  nowselect.setAttribute('checked', 'true')
+	  console.log(nowselect.getAttribute('checked'));
+	
   })
   
   bindEvent(pages, 'click', 'SPAN', function(e) {
 	 for(var i = 0; i < pageSpan.length; i++){
-		 removeClassName(pageSpan[i],' checked');
+		 if(answer[i]<0){
+		  removeClassName(pageSpan[i],' checked');
+		 }
+		 if(e.target == pageSpan[i]){
+			 checked(e.target)
+	         resetTopic(i,itemsA)
+			 nowItem = i
+		 }
 	 }
-	 checked(e.target)
   })
+  
+  bindEvent(submitDiv[1], 'click', function(e) {
+	  if(nowItem < (itemNum-1)){
+	    if(answer[nowItem]<0){
+		  removeClassName(pageSpan[i],' checked');
+		 }
+	    nowItem = nowItem + 1
+	    resetTopic(nowItem,itemsA)
+		checked(pageSpan[nowItem])
+		if(nowItem == (itemNum-1)){
+			submitDiv[1].innerHTML = '交卷'
+			submitDiv[0].style.display = 'none'
+		}
+		
+	  } else {
+		  alert('等待算分！')
+	  }
+  })
+  
+  
   
   
   /** 内置函数 **/
@@ -58,8 +94,11 @@ window.onload = function () {
   function resetTopic(num,items){
 	 // 清除样式
 	 for(var i = 0; i < icons.length; i++){
-		 removeClassName(icons[i],' selected');
+		   removeClassName(icons[i],' selected')
 	 } 
+	 if (answer[num]>0){
+		 addClassName(icons[answer[num]], 'selected')
+	 }
 	 // 更改题目内容
 	 var content = items.content[num]
 	 problem.innerHTML = content.topic
@@ -81,7 +120,11 @@ window.onload = function () {
 	  console.log(pageSpan.length)
 	  checked(pageSpan[0])
   }
- 
+  
+  //选中题目
+  function checked(node) {
+	 node.className = node.className + " checked"
+  }
 }
 
 
@@ -91,9 +134,9 @@ window.onload = function () {
 function removeClassName(e, className){
 	e.className = e.className.replace(className,"")
 }
-//选中 
-function checked(node) {
-	node.className = node.className + " checked"
+// 添加类名
+function addClassName(e, className){
+	e.className = e.className + ' ' + className
 }
 //事件代理
 function bindEvent(elem, type, selector, fn){

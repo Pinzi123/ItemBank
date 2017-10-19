@@ -10,20 +10,32 @@
 </script>
 </head>
 <body>
-
+<div class='hide'></div>
 <div class='subject-content'>
-<div class='topic'>
-   <p id='problem' ></p>
-   <p class='radio'><span class='icon'></span><span class='option'></span></p>
-   <p class='radio'><span class='icon'></span><span class='option'></span></p>
-   <p class='radio'><span class='icon'></span><span class='option'></span></p>
-   <p class='radio'><span class='icon'></span><span class='option'></span></p>
-</div>
+   <div class='topic'>
+     <p id='problem' ></p>
+     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+   </div>
+
    <div class='submit'> 
       <div class='btn warning-btn'>提前交卷</div>
 	  <div class='btn btn-primary'>下一题</div>
    </div>
-   <div id='pages'></div>
+   <div class='hr'></div>
+   <div class='card'>
+     <div>答题卡</div>
+     <div id='pages'></div>
+   </div>
+</div>
+<div class='record'>
+<div id='pages'>
+<p class='record-title'>答案判断</p>
+<span class='checked'>1</span>
+<span class='warning'>1</span>
+</div>
 </div>
 
 <script type="text/javascript" src="js/topic.js"></script>

@@ -45,3 +45,25 @@ a,,span,div,li,ul,ol,p{
     left: 3px;
     top: 3px;
 }
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    width: 110px;
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none 0;
+    cursor: pointer;
+    line-height: normal;
+    outline: 0;
+    white-space: nowrap;
+}
+.warning-btn {
+    background: #ff6547;
+    margin-right: 20px;
+}
+.btn-primary {
+    background: #00BC9B;
+}

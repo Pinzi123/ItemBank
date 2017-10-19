@@ -1,3 +1,17 @@
+.hr{
+	border-bottom:#dce4ec solid 1px; 
+	padding: 10px 0px;
+	margin-bottom:10px;
+}
+.hide{
+	width:100vw;
+	height:100vh;
+	background-color: #eee;
+	opacity:0.7;
+    filter:Alpha(opacity=70);
+	position:absolute;
+	top:0;
+}
 .subject-content{
  width:auto;
  height:auto;
@@ -6,7 +20,7 @@
 }
 
 .subject-content .topic p{
-	display:block;
+ display:block;
  width:100%;
  line-height:30px;
 }
@@ -18,46 +32,49 @@
 .topic .checked{
 	border: 1px solid #00bc9b;
 }
-
+.card{
+    color: #dce4ec;
+}
 #pages span{
-display:inline-block;
-width:40px;
-height:40px;
-line-height:40px;
-text-align:center;
-font-size: 16px;
-color: #dce4ec;
-margin:20px 10px;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-size: 16px;
+    margin:20px 10px;
 }
 #pages .checked{
     background: #59b59c;
     color: #FFF;
 }
-#pages span:hover{
+.card span:hover{
 	background: #59b59c;
     color: #FFF;
 }
 .submit{
 	text-align:right;
 }
-.btn {
-    display: inline-block;
-    text-align: center;
-    padding: 10px 0;
-    width: 110px;
-    color: #FFF;
-    font-size: 14px;
-    border-radius: 3px;
-    border: none 0;
-    cursor: pointer;
-    line-height: normal;
-    outline: 0;
-    white-space: nowrap;
+
+/*提交答案后*/
+.record{
+	z-index:100;
+	position:absolute;
+	top:30%;
+	background-color:#fff;
+	width:80%;
+	height:auto;
+	margin-left:10%;
+    margin-right:10%;
+	border-radius: 5%;
 }
-.warning-btn {
-    background: #ff6547;
-    margin-right: 20px;
+.record .record-title{
+height:30px;
+line-height:30px;
+margin-left:10px;
+margin-bottom:-10px;
 }
-.btn-primary {
-    background: #00BC9B;
+#pages .warning{
+	background: #ff6547;
+	color: #fff;
 }

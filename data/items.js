@@ -22,3 +22,8 @@ var itemsA = {
 	],
 	"length":3
 }
+
+var answer = []
+for(var i = 0; i < itemsA.length; i++){
+	answer[i]=-1
+}
