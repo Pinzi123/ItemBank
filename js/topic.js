@@ -24,6 +24,8 @@ window.onload = function () {
  var record = document.getElementsByClassName('record')[0]
  var hide = document.getElementsByClassName('hide')[0]
  var closeBtn = document.getElementsByClassName('close')
+ var progressNums = document.getElementById('progress-nums')
+ var progressBar = document.getElementById('progress-bar')
  var nowItem = 0
  var nowRadio = -1
  var itemNum = itemsA.length
@@ -64,15 +66,19 @@ window.onload = function () {
 		 }
 		 if(e.target == pageSpan[i]){
 			 checked(e.target)
-	         resetTopic(i,itemsA)
 			 nowItem = i
+	         resetTopic(i,itemsA)
 		 }
 	 }
 	 
 	 if(nowItem < (itemNum-1)){
 		 submitDiv[1].innerHTML = '下一题'
 		 submitDiv[0].style.display = 'inline-block'
+	 } else {
+		 submitDiv[1].innerHTML = '交卷'
+		 submitDiv[0].style.display = 'none'		 
 	 }
+	 
   })
   
   bindEvent(submitDiv[0], 'click', function(e) {
@@ -122,6 +128,9 @@ window.onload = function () {
 	 for(var i = 0; i < options.length; i++){
 		 options[i].innerHTML = content.options[i]
 	 }
+	 
+	 progressNums.innerHTML =  (nowItem + 1)+ '/' + itemNum
+	 progressBar.style.width = (nowItem + 1)/itemNum*100 + '%'
   }
   
   // 设置题目数
