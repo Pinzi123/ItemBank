@@ -13,17 +13,87 @@
 	top:0;
 	display:none
 }
+.topic .content{
+	margin:0
+}
+
+/** 题目主题 **/
+.subject-progress {
+    padding: 10px 200px 10px 30px;
+    background: #232c31;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    white-space: nowrap;
+    height: 30px;
+}
+
 .subject-content{
- width:auto;
- height:auto;
- margin-left:10%;
- margin-right:10%;
+ min-height:300px;
+ margin-top:10px;
+ padding:10px 20px;
+ background-color: #fff;
+}
+
+.subject-progress .progress {
+    margin: 0;
+    width: 90%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.progress {
+    overflow: hidden;
+    background: #ebedef;
+    border-radius: 32px;
+    height: 12px;
+}
+
+.progress-nums {
+    color: #fff;
+    font-size: 20px;
+}
+
+.progress-time {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #2d3339;
+    border-radius: 0 6px 0 0;
+    color: #fff;
+    height: 40px;
+	line-height:30px;
+    width: 180px;
+    padding-top: 10px;
+    text-align: center;
+	display:inline-block;
+	 background: url(../img/time.png) no-repeat 20px center;
+	 background-size: 25px 25px;
+}
+
+.subject-title {
+    padding: 15px 20px 15px 55px;
+    background: #FFF url(../img/remind.png) no-repeat 30px center;
+	background-size: 20px 20px;
+    line-height: 1.5;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    border-radius: 3px;
 }
 
 .subject-content .topic p{
  display:block;
  width:100%;
- line-height:30px;
+ line-height:40px;
+ font-size:16px;
+
+}
+
+.radio{
+ border: 1px solid #00bc9b;
+ margin: 10px 0 ;
+ border: 1px solid #d4d4d4;
+ border-radius: 2px;
 }
 
 .radio span {
@@ -62,17 +132,25 @@
 	z-index:100;
 	position:absolute;
 	top:30%;
-	background-color:#fff;
+	background: #fff;
 	width:80%;
 	height:auto;
 	margin-left:10%;
     margin-right:10%;
 	border-radius: 5%;
-	display:none
+	display:none;
+	font-size:16px;
+	padding:10px 20px;
+}
+.record .close{
+	position:absolute;
+	top:5px;
+	right:5px;
 }
 .record .record-title{
-height:30px;
-line-height:30px;
+color: #b8b6b8;
+height:40px;
+line-height:40px;
 margin-left:10px;
 margin-bottom:-10px;
 }
@@ -80,3 +158,4 @@ margin-bottom:-10px;
 	background: #ff6547;
 	color: #fff;
 }
+

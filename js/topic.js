@@ -23,6 +23,7 @@ window.onload = function () {
  var submitDiv = document.getElementsByClassName('submit')[0].getElementsByTagName("div")
  var record = document.getElementsByClassName('record')[0]
  var hide = document.getElementsByClassName('hide')[0]
+ var closeBtn = document.getElementsByClassName('close')
  var nowItem = 0
  var nowRadio = -1
  var itemNum = itemsA.length
@@ -96,6 +97,10 @@ window.onload = function () {
 	  }
   })
   
+  bindEvent(closeBtn[0], 'click', function(e) {
+	  window.location.href="index.html"
+  })
+  
   
   
   
@@ -155,36 +160,4 @@ window.onload = function () {
 		  pages.appendChild(span);
 	  }
   }
-}
-
-
-/** 全局函数 **/
-
-// 移除类名
-function removeClassName(e, className){
-	if(e.className){
-	  e.className = e.className.replace(className,"")
-	}
-}
-// 添加类名
-function addClassName(e, className){
-	e.className = e.className + ' ' + className
-}
-//事件代理
-function bindEvent(elem, type, selector, fn){
-	if(fn == null){
-		fn = selector
-		selector = null
-	}
-	elem.addEventListener(type, function(e) {
-		var target
-		if(selector&&e.target !== elem){
-			target = e.target
-			if(target.className.match(selector) || target.nodeName.match(selector)) {
-				fn.call(target, e)
-			}
-		} else {
-			fn(e)
-		}
-	})
 }

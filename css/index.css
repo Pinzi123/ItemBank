@@ -1,0 +1,282 @@
+.container {
+    background: #eee;
+    position: relative;
+    height: auto;
+    min-height: 100%;
+}
+.index{
+	height:100%;
+	min-width:800px;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:after, .clearfix:before {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+ .header{
+	background: #3d444c;
+    position: fixed;
+    width: 100%;
+	min-width:830px;
+    z-index: 101;
+    left: 0;
+    margin-bottom: 30px;
+}
+
+ .logo{
+	background:url(../img/logo.png) no-repeat center left;
+	background-size:30px 30px;
+	color:#fff;
+	float: left;
+	font-size: 18px;
+    display: block;
+    line-height: 53px;
+	padding-left:35px;
+    padding-right: 15px;
+	margin-left:15px;
+}
+
+.header li {
+    float: left;
+    text-align: center;
+    height: 54px;
+    position: relative;
+}
+
+.header li  a {
+    color: #ccc;
+    font-size: 16px;
+    display: block;
+    line-height: 53px;
+    padding: 0 15px;
+}
+
+.other{
+	float:right;
+	margin-right:-4px;
+}
+
+.header .other a {
+    font-size: 14px;
+}
+.header .other li:after{
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 21px;
+    color: #8a96a7;
+ }
+ 
+ .module-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background: #fff;
+	text-align: center;
+    padding: 20px 0;
+}
+.content{
+	margin: 0 10%;
+    padding-top: 70px;
+    padding-bottom: 250px;
+}
+
+.module-box a{
+	display: inline-block;
+    margin: 0 22px;
+}
+
+.module-head p:before {
+    background: #FF6547;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+}
+
+.module-head p {
+    font-size: 16px;
+    line-height: 16px;
+    float: left;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.module-head {
+    padding: 15px;
+}
+
+.module-body {
+	padding: 5px 20px 20px;
+}
+
+.count-item {
+    display: inline-block;
+    margin-right: 65px;
+}
+
+.count-item span {
+    color: #969696;
+    font-size: 14px;
+}
+
+.count-item a {
+    font-size: 14px;
+    color: #00bc9b;
+    font-weight: 700;
+	margin:0;
+}
+
+.statistical-item-head {
+    background: #ededed;
+    color: #999;
+    border-bottom: none;
+}
+.statistical-list {
+    margin: 10px 10px 25px;
+    border: 1px solid #f0f0f0;
+}
+.statistical-item {
+    border-bottom: 1px dashed #d9d9d9;
+    color: #b8b6b8;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+
+.s-item-cell {
+    padding: 5px;
+    float: left;
+    line-height: 42px;
+}
+
+.s-checkbox {
+    width: 8%;
+}
+
+.s-column1 {
+    width: 23%;
+}
+
+.s-column2 {
+    width: 23%;
+}
+
+.s-column3 {
+    width: 17%;
+}
+
+.s-column4 {
+    width: 17%;
+}
+.statistical-more {
+    text-align: center;
+    background: #f7f7f7 url(../img/down.png) no-repeat center;
+	background-size:10px 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.statistical-list-btn .btn {
+    width: 140px;
+}
+
+/* 底部 */
+.ft-wrap {
+    position: absolute;
+    bottom: 0;
+	top:85%;
+    left: 0;
+    height: 225px;
+    width: 100%;
+    z-index: 10;
+    background: #2A2F35;
+}
+
+.ft-cont {
+    background: #2a2f35;
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.ft-main {
+    float: right;
+    border-left: 1px solid #646f7c;
+    width: 300px;
+    margin: 20px 0 0;
+    padding: 10px 0 0 30px;
+}
+
+.ft-links {
+    margin-bottom: 5px;
+}
+
+.ft-links li {
+    display: inline-block;
+    margin: 0 15px 5px 0;
+}
+
+.ft-links a {
+    color: #a9b8ca;
+}
+
+.webrights li {
+    margin-bottom: 10px;
+}
+
+.webrights a {
+    color: #798fac;
+}
+
+.ft-web-info {
+    float: left;
+    width: 260px;
+    padding: 0 20px;
+    margin-right: 20px;
+}
+
+.ft-web-name {
+    font-size: 20px;
+    color: #fff;
+    margin: 20px 0 30px;
+}
+.ft-info-item .btn {
+    float: right;
+    position: relative;
+}
+.ft-info-item {
+    color: #8793a2;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.ft-app {
+    float: left;
+    width: 200px;
+    color: #bac8da;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.ft-qrcode-box {
+    background: #5b646d;
+    padding: 8px;
+    border-radius: 5px;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 10px;
+}

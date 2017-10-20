@@ -3,40 +3,159 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>不是你的题库</title>
+<link href="css/clear.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
 <link href="css/icon.css" rel="stylesheet">
-<link href="css/page.css" rel="stylesheet">
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 </head>
 <body>
-<div class='hide'></div>
-<div class='subject-content'>
-   <div class='topic'>
-     <p id='problem' ></p>
-     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
-     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
-     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
-     <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
-   </div>
+<div class='index container'>
+  <div class='header clearfix'>
+     <a href='' class='logo'>不是你的题库</a>
+	 <ul class='nav'>
+	    <li><a>首页</a></li>
+		<li><a>课程</a></li>
+		<li><a>题库</a></li>
+		<li><a>讨论区</a></li>
+	 </ul>
+	 <ul class='other'>
+	 	<li><a class='icon-search'>搜索</a></li>
+		<li><a>App</a></li>
+		<li><a>消息</a></li>
+		<li><a>假装你登录了</a></li>
+	 </ul>
+  </div>
+  <div class='content clearfix'>
+     <div class='module-box home-items'>
+	     <a class='real-exercise'><i></i><p>真题练习</p></a>
+		 <a class='devote-exercise'><i></i><p>专项练习</p></a>
+		 <a class='wrong-exercise'><i></i><p>错题练习</p></a>
+		 <a class="subject-exercise"><i></i><p>今日作业</p></a>
+		 <a class='check-discuss'><i></i><p>课程学习</p></a>
+		 <a class='items-collect'><i></i><p>我的收藏</p></a>
+	 </div>
+	 <div class='module-box'>
+	    <div class="module-head clearfix">
+          <p>最近练习</p>
+          <a href="javascript:void(0);" class="icon-drag"></a>
+        </div>
+		<div class='module-body'>
+		  <div class="model-count">
+             <div class="count-item">
+                <span>共刷题：</span>
+                <a href="javascript:void(0);">1120题</a>
+             </div>
+             <div class="count-item">
+                <span>做对题目：</span>
+                <a href="javascript:void(0);">972题</a>
+             </div>
+             <div class="count-item">
+                <span>最近一周平均分：</span>
+                <a href="javascript:void(0);">0</a>
+             </div>
+             <div class="count-item">
+               <span>排名：</span>
+               <a chref="javascript:void(0);">15773</a>
+             </div>
+           </div>
+		  <div class='statistical-list'>
+		     <div class="statistical-item statistical-item-head clearfix">
+               <div class="s-item-cell s-checkbox"></div>
+               <div class="s-item-cell s-column1">最近练习试题</div>
+               <div class="s-item-cell s-column2">做题数/题目总数</div>
+               <div class="s-item-cell s-column3">正确率</div>
+             </div>
+			 <div class="statistical-item clearfix js-statistical-item" data-id="601">
+               <div class="s-item-cell s-checkbox">
+                  <label class="checkbox" id="jsCpn_1_checkbox_0">
+                    <span class="icons"></span>
+                    <input type="checkbox">
+                  </label>
+               </div>
+               <div class="s-item-cell s-column1">某某班数学习题一</div>
+               <div class="s-item-cell s-column2">2/3</div>
+               <div class="s-item-cell s-column3">66%</div>
+               <div class="s-item-cell s-column4">
+               <form class="form-box" method="post">
+                  <button data-left="151" class="btn btn-primary nc-js-make-paper">再次练习</button>
+                  <input type="hidden" name="token" value="">
+			   </form>
+               </div>
+             </div>
+			 <div class="statistical-item clearfix js-statistical-item" data-id="601">
+               <div class="s-item-cell s-checkbox">
+                  <label class="checkbox" id="jsCpn_1_checkbox_0">
+                    <span class="icons"></span>
+                    <input type="checkbox">
+                  </label>
+               </div>
+               <div class="s-item-cell s-column1">某某班数学习题二</div>
+               <div class="s-item-cell s-column2">3/3</div>
+               <div class="s-item-cell s-column3">100%</div>
+               <div class="s-item-cell s-column4">
+               <form class="form-box" method="post" >
+                  <button data-left="151" class="btn btn-primary nc-js-make-paper">再次练习</button>
+                  <input type="hidden" name="token" value="">
+			   </form>
+               </div>
+             </div>
+		  </div>
+		  <div class="statistical-more">
+            <a href="javascript:void(0);" class="icon-angle-up js-skill-angle"></a>
+            <a href="javascript:void(0);" class="icon-angle-down js-skill-angle"></a>
+          </div>
+		  <div class="statistical-list-btn">
+            <a href="javascript:void(0);" id="jsChosen" class="btn btn-primary">练习选中试题</a>
+            <a href="javascript:void(0);" id="jsOther" class="btn btn-default">练习其他试题</a>
+          </div>
+		</div>
+	 </div>
+  </div>
+<div class="ft-wrap">
+<div class="ft-cont clearfix">
+<div class="ft-main">
+<ul class="ft-links">
+<li><a href="">关于我们</a></li>
+<li><a href="">加入我们</a></li>
+<li><a href="" target="_blank">意见反馈</a></li>
+<li><a href="">企业服务</a></li>
+<li><a href="">网站合作</a></li>
+<li><a href="">免责声明</a></li>
+<li><a href="">友情链接</a></li>
+</ul>
+<ul class="webrights">
+<li><span style="color:#a9b8ca;">粤ICP备0000000000号-0</span></li>
+<li>
+<span style="color:#a9b8ca;">
+<img src="./img/ghs.png" style="width:18px;height:18px;">
+<a style="font-size:12px;" class="ft-info-item" target="_blank" href="http://www.beian.gov.cn">京公网安备 00000000000号</a>
+</span>
+</li>
+<li><a href="javascript:void(0);">不是你的题库©2017 All Rights Reserved</a></li>
+</ul>
+</div>
+<dl class="ft-web-info">
+<dt class="ft-web-name">不是你的题库</dt>
+<dd class="ft-info-item">QQ群：6666666666</dd>
+<dd class="ft-info-item">微 信：www_noyour_com
+<a href="javascript:;" class="btn btn-primary btn-xs">关注
+</a>
+</dd>
+<dd class="ft-info-item">微 博：不是你的
+<a href="http://weibo.com" class="btn btn-primary btn-xs" target="_blank">关注
+</a>
+</dd>
+</dl>
+<div class="ft-app">
+<div class="ft-qrcode-box">
+<img width="128" src="./img/wechat.jpg">
+</div>
+<p>扫一扫，加我为好友</p>
+</div>
+</div>
+</div>
+</div>
 
-   <div class='submit'> 
-      <div class='btn warning-btn'>提前交卷</div>
-	  <div class='btn btn-primary'>下一题</div>
-   </div>
-   <div class='hr'></div>
-   <div class='card'>
-     <div>答题卡</div>
-     <div class='pages'></div>
-   </div>
-</div>
-<div class='record'>
-<div class='pages'>
-<p class='record-title'>答案判断</p>
-</div>
-</div>
-
-<script type="text/javascript" src="js/topic.js"></script>
-<script type="text/javascript" src="data/items.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

@@ -67,3 +67,46 @@ a,,span,div,li,ul,ol,p{
 .btn-primary {
     background: #00BC9B;
 }
+.btn-default {
+    background: #BCBCBC;
+}
+.btn-xs {
+    width: 60px;
+    font-size: 14px;
+    padding: 5px 0 6px;
+}
+
+.close {
+	background: url(../img/close.png) no-repeat 99% 2%;
+	background-size:30px 30px;
+	width:30px;
+	height:30px;
+}
+
+
+
+/*home*/
+.home-items i {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url(../img/iconItems3.png) no-repeat;
+}
+.real-exercise i {
+    background-position: 0 0;
+}
+.devote-exercise i {
+    background-position: 0 -60px;
+}
+.wrong-exercise i {
+    background-position: 0 -121px;
+}
+.subject-exercise i {
+    background-position: 0 -182px;
+}
+.check-discuss i {
+    background-position: 0 -243px;
+}
+.items-collect i {
+    background-position: 0 -304px;
+}
