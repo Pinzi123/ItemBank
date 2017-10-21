@@ -14,13 +14,20 @@ var itemsA = {
 			"correct":"3"
 		},	
 		{
-		    "topic":"题目三：选A",
+		    "topic":"求` sum _ { i = 0 } ^ { 10 }i^2`的值",
 			"type":"radio",
-			"options":["A","B","C","D"],
+			"options":["10","110","55","285"],
 			"correct":"3"
-		}	
+		},
+		{
+		    "topic":"已知函数`f(x)=\ frac { 3-x} { 4x+1}`,求f(x)的值域",
+			"type":"radio",
+			"options":["`{y|y!=\ frac { 1 } { 4 }}`","`{y|y!=\ frac { 1 } { 2 }}`","`{y|y!=\ frac { 1 } { 8 }}`","`{y|y!=1}`"],
+			"correct":"1"	
+			
+		}
 	],
-	"length":3
+	"length":4
 }
 
 var answer = []

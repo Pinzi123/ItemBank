@@ -26,6 +26,7 @@ window.onload = function () {
  var closeBtn = document.getElementsByClassName('close')
  var progressNums = document.getElementById('progress-nums')
  var progressBar = document.getElementById('progress-bar')
+ var time = document.getElementsByClassName('time-text')[0]
  var nowItem = 0
  var nowRadio = -1
  var itemNum = itemsA.length
@@ -107,7 +108,9 @@ window.onload = function () {
 	  window.location.href="index.html"
   })
   
-  
+  /** 定时器 **/
+  var int=self.setInterval("clock()",1000);
+
   
   
   /** 内置函数 **/
@@ -123,12 +126,14 @@ window.onload = function () {
 	 }
 	 // 更改题目内容
 	 var content = items.content[num]
-	 problem.innerHTML = content.topic
+	problem.innerHTML = content.topic
+	//UpdateMath(content.topic)
 	 // 更改选项内容
 	 for(var i = 0; i < options.length; i++){
 		 options[i].innerHTML = content.options[i]
 	 }
 	 
+	 MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
 	 progressNums.innerHTML =  (nowItem + 1)+ '/' + itemNum
 	 progressBar.style.width = (nowItem + 1)/itemNum*100 + '%'
   }
@@ -169,4 +174,15 @@ window.onload = function () {
 		  pages.appendChild(span);
 	  }
   }
+  
 }
+
+var timeNum = 16*60*60*1000
+var timeText = "00:00:00"
+//
+  function clock(){
+	  
+      timeNum = timeNum + 1000;
+	  var date = new Date(timeNum)
+      document.getElementsByClassName('time-text')[0].innerHTML=date.toTimeString().substring(0,9);
+  }
