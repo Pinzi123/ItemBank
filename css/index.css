@@ -1,3 +1,17 @@
+body {
+    font: 12px/1.5 arial,STHeiti,'Microsoft YaHei',\5b8b\4f53;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: arial, STHeiti, "Microsoft YaHei", 宋体;
+    word-wrap: break-word;
+}
+
 .container {
     background: #eee;
     position: relative;
