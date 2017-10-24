@@ -3,8 +3,8 @@ window.onload = function () {
  /**
  var xhr = new XMLHttpRequest()
 
- xhr.open("GET","./data/items.js",false); 
- 
+ xhr.open("GET","./data/items.js",false);
+
  xhr.onreadystatechange = function () {
 	 if (xhr.readyState == 4){
 		 if (xhr.status ==200) {
@@ -13,7 +13,7 @@ window.onload = function () {
 	 }
  }
  xhr.send();**/
- 
+
  var topic = document.getElementsByClassName('topic')[0];
  var icons = document.getElementsByClassName('icon')
  var problem = document.getElementById('problem')
@@ -39,12 +39,12 @@ window.onload = function () {
 	 e.target.className = e.target.className + ' checked';
 	 e.target.getElementsByClassName('icon')[0].className = e.target.getElementsByClassName('icon')[0].className + ' checked';
  })
- 
+
  bindEvent(topic, 'mouseout', 'radio', function(e){
    e.target.className = e.target.className.replace(" checked","");
    e.target.getElementsByClassName('icon')[0].className = e.target.getElementsByClassName('icon')[0].className.replace(" checked","")
  })
- 
+
  bindEvent(topic, 'click', 'radio', function(e){
 	 var nowselect = e.target.getElementsByClassName('icon')[0]
 	 for(var i = 0; i < icons.length; i++){
@@ -57,9 +57,9 @@ window.onload = function () {
 	  nowselect.className =  nowselect.className + ' selected';
 	  nowselect.setAttribute('checked', 'true')
 	  console.log(nowselect.getAttribute('checked'));
-	
+
   })
-  
+
   bindEvent(pages, 'click', 'SPAN', function(e) {
 	 for(var i = 0; i < pageSpan.length; i++){
 		 if(answer[i]<0){
@@ -71,21 +71,21 @@ window.onload = function () {
 	         resetTopic(i,itemsA)
 		 }
 	 }
-	 
+
 	 if(nowItem < (itemNum-1)){
 		 submitDiv[1].innerHTML = '下一题'
 		 submitDiv[0].style.display = 'inline-block'
 	 } else {
 		 submitDiv[1].innerHTML = '交卷'
-		 submitDiv[0].style.display = 'none'		 
+		 submitDiv[0].style.display = 'none'
 	 }
-	 
+
   })
-  
+
   bindEvent(submitDiv[0], 'click', function(e) {
 	  showRecord();
   })
-  
+
   bindEvent(submitDiv[1], 'click', function(e) {
 	  if(nowItem < (itemNum-1)){
 	    if(answer[nowItem]<0){
@@ -98,29 +98,29 @@ window.onload = function () {
 			submitDiv[1].innerHTML = '交卷'
 			submitDiv[0].style.display = 'none'
 		}
-		
+
 	  } else {
 		  showRecord();
 	  }
   })
-  
+
   bindEvent(closeBtn[0], 'click', function(e) {
 	  window.location.href="index.html"
   })
-  
+
   /** 定时器 **/
   var int=self.setInterval("clock()",1000);
 
-  
-  
+
+
   /** 内置函数 **/
-  
+
   //重置题目
   function resetTopic(num,items){
 	 // 清除样式
 	 for(var i = 0; i < icons.length; i++){
 		   removeClassName(icons[i],' selected')
-	 } 
+	 }
 	 if (answer[num]>0){
 		 addClassName(icons[answer[num]], 'selected')
 	 }
@@ -132,12 +132,12 @@ window.onload = function () {
 	 for(var i = 0; i < options.length; i++){
 		 options[i].innerHTML = content.options[i]
 	 }
-	 
+
 	 MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
 	 progressNums.innerHTML =  (nowItem + 1)+ '/' + itemNum
 	 progressBar.style.width = (nowItem + 1)/itemNum*100 + '%'
   }
-  
+
   // 设置题目数
   function resetPages(len) {
 	  for(var i=0; i<len; i++){
@@ -150,38 +150,39 @@ window.onload = function () {
 	  console.log(pageSpan.length)
 	  checked(pageSpan[0])
   }
-  
+
   //选中题目
   function checked(node) {
 	 node.className = node.className + " checked"
   }
-  
+
   //算分
   function showRecord(){
-	  record.style.display = 'block'
-	  hide.style.display = 'block'
-	  var pages = document.getElementsByClassName('pages')[1]
-	  for(var i=0; i<itemNum; i++){
-		  var span = document.createElement("span");
-		  var node=document.createTextNode(i+1);
-		  if(answer[i] == itemsA.content[i].correct){
-			 span.className = 'checked' 
-			 console.log(answer[i])
-		  } else {
-			 span.className = 'warning' 
-		  }
-          span.appendChild(node);
-		  pages.appendChild(span);
-	  }
+    window.location.href="report.html"
+	  // record.style.display = 'block'
+	  // hide.style.display = 'block'
+	  // var pages = document.getElementsByClassName('pages')[1]
+	  // for(var i=0; i<itemNum; i++){
+		//   var span = document.createElement("span");
+		//   var node=document.createTextNode(i+1);
+		//   if(answer[i] == itemsA.content[i].correct){
+		// 	 span.className = 'checked'
+		// 	 console.log(answer[i])
+		//   } else {
+		// 	 span.className = 'warning'
+		//   }
+    //       span.appendChild(node);
+		//   pages.appendChild(span);
+	  // }
   }
-  
+
 }
 
 var timeNum = 16*60*60*1000
 var timeText = "00:00:00"
 //
   function clock(){
-	  
+
       timeNum = timeNum + 1000;
 	  var date = new Date(timeNum)
       document.getElementsByClassName('time-text')[0].innerHTML=date.toTimeString().substring(0,9);
