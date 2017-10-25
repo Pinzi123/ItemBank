@@ -41,23 +41,21 @@
      <div class="result-subject-item">
       <h1>每题得分</h1>
         <ul class="subject-num-list">
-        <li class="error-order">
-        <a class="done-hover" href="">1</a></li>
-        <li class="error-order">
-        <a href="">2</a></li>
-        <li class="error-order">
-        <a href="">3</a></li>
-        <li class="error-order">
-        <a href="">4</a></li>
-        <li class="error-order">
-        <a href="">5</a></li>
+        <li>
+        <a href="analyze.html?tid=1">1</a></li>
+        <li>
+        <a href="analyze.html?tid=2">2</a></li>
+        <li>
+        <a href="analyze.html?tid=3">3</a></li>
+        <li>
+        <a href="analyze.html?tid=4">4</a></li>
         </ul>
       </div>
      <div class="result-question-box">
        <div class="subject-question">
-         <span class="question-number">1</span>
-         <a href="#referAnchor" class="btn btn-blue btn-analysis">查看解析</a>
-         <div class="question-main" id='problem'>有 3台复印机（ copier copier copiercopier），平均每台周工作 42 小时，每台周最少工作 35 小时，问一台复印机每周最多会工作时间？</div>
+         <span class="question-number"></span>
+         <!-- <a href="#referAnchor" class="btn btn-blue btn-analysis">查看解析</a> -->
+         <div class="question-main" id='problem'></div>
       </div>
       <div class='subject-content'>
          <div class='topic'>
@@ -66,7 +64,13 @@
            <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
            <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
          </div>
+          <p class='answer'>正确答案：<span id='correctAnswer'></span>
+            你的答案：<span id='yourAnswer'></span></p>
        </div>
+    </div>
+    <div class="analysis result-subject-item">
+      <h1>参考解析</h1>
+      <div id='analysis-detail'>dsfadsfafdsfad</div>
     </div>
     </div>
 	 </div>

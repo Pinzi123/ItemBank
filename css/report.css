@@ -179,3 +179,20 @@ menu li.selected, .menu li.selected .sub-menu, .menu li.selected a, .menu li.sel
     line-height: 12px;
     font-weight: 400;
 }
+.answer{
+  line-height: 30px;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #666;
+}
+.analysis{
+  background: #FFF;
+  padding: 20px 30px;
+  border-bottom: 1px solid #EDEDED;
+  color: #666;
+  font-size: 14px;
+  line-height: 2;
+}
+.analysis-title{
+  margin-bottom: 20px;
+}
