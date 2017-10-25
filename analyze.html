@@ -6,14 +6,18 @@
 <link href="css/clear.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
 <link href="css/icon.css" rel="stylesheet">
+<link href="css/page.css" rel="stylesheet">
 <link href="css/report.css" rel="stylesheet">
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 </head>
 <body>
 <div class='index container'>
   <div class='header clearfix'>
      <a href='index.html' class='logo'>不是你的题库</a>
 	 <ul class='nav'>
-	    <li><a href='index.html'>首页</a></li>
+	  <li><a href='index.html'>首页</a></li>
 		<li><a>课程</a></li>
 		<li><a>题库</a></li>
 		<li><a>讨论区</a></li>
@@ -28,36 +32,43 @@
   <div class='content clearfix'>
     <div class="menu-box clearfix">
        <ul class="menu clearfix">
-         <li class="selected"><a href="report.html">评估报告</a></li>
-         <li><a href="analyze.html">答案解析</a></li>
+         <li><a href="report.html">评估报告</a></li>
+         <li class="selected"><a href="analyze.html">答案解析</a></li>
        </ul>
      </div>
-	 <div class='report clearfix'>
-	    <div class='report-box clearfix'>
-		   <div class='report-info'>
-		       <div class='info-title'>
-			      <span class='score'>得分：100</span>
-			   </div>
-			   <div class='info-detail'>
-			      <p><span>试卷：</span><span class='info-item'>假的报告</span></p>
-				  <p><span>正确题数：</span><span class='info-item'>5/6</span></p>
-				  <p><span>得分：</span><span class='info-item'>100</span></p>
-				  <p><span>用时：</span><span class='info-item'>00:00:00</span></p>
-				  <p>
-                    <a href="javascript:void(0);" class="btn btn-primary js-log-clock nc-req-auth">今日打卡</a>
-                  </p>
-			   </div>
-		   </div>
-		   <div class='ability-map clearfix'>
-		       <div class='info-title'>
-			      <span class='map'>你的技能图谱</span>
-			   </div>
-			   <div class='ability-body clearfix'>
-			      <canvas id='circle' width= "300" height="250"></canvas>
-				  <canvas id='polygon' width= "300" height="250"></canvas>
-			   </div>
-		   </div>
-		</div>
+	 <div class='module-box clearfix'>
+     <div class="text-align">
+     <div class="result-subject-item">
+      <h1>每题得分</h1>
+        <ul class="subject-num-list">
+        <li class="error-order">
+        <a class="done-hover" href="">1</a></li>
+        <li class="error-order">
+        <a href="">2</a></li>
+        <li class="error-order">
+        <a href="">3</a></li>
+        <li class="error-order">
+        <a href="">4</a></li>
+        <li class="error-order">
+        <a href="">5</a></li>
+        </ul>
+      </div>
+     <div class="result-question-box">
+       <div class="subject-question">
+         <span class="question-number">1</span>
+         <a href="#referAnchor" class="btn btn-blue btn-analysis">查看解析</a>
+         <div class="question-main" id='problem'>有 3台复印机（ copier copier copiercopier），平均每台周工作 42 小时，每台周最少工作 35 小时，问一台复印机每周最多会工作时间？</div>
+      </div>
+      <div class='subject-content'>
+         <div class='topic'>
+           <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+           <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+           <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+           <p class='radio'><span class='icon' checked='false'></span><span class='option'></span></p>
+         </div>
+       </div>
+    </div>
+    </div>
 	 </div>
   </div>
 <div class="ft-wrap">
@@ -104,8 +115,9 @@
 </div>
 </div>
 </div>
-
+</body>
+<script type="text/javascript" src="data/items.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="js/report.js"></script>
+<script type="text/javascript" src="js/analyze.js"></script>
 </body>
 </html>

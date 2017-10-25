@@ -2,13 +2,13 @@
     background: #FFF;
     border-bottom: 2px solid #00bc9b;
     border-top: none;
-	
+
 }
 .menu, .menu-txt {
     float: left;
     letter-spacing: -4px;
     white-space: nowrap;
-	
+
 }
 menu li.selected, .menu li.selected .sub-menu, .menu li.selected a, .menu li.selected a:hover {
     background: #00bc9b;
@@ -91,10 +91,91 @@ menu li.selected, .menu li.selected .sub-menu, .menu li.selected a, .menu li.sel
 	margin: 0 auto;
 	margin-top: 30px;
 }
-.ability-map canvas{    
+.ability-map canvas{
     position: absolute;
     left: 0px;
     top: 0px;
 	display: block;
     user-select: none;
+}
+
+/** 答案解释 **/
+.module-box .result-subject-item {
+    background: #FFF;
+    padding: 20px 30px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.module-box .text-align{
+  text-align: left;
+}
+
+.result-subject-item h1, .result-subject-item h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.subject-num-list {
+    letter-spacing: -4px;
+    margin-right: -10px;
+}
+
+.subject-num-list li {
+    letter-spacing: 0;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.subject-num-list li a {
+    margin:0;
+}
+
+.subject-num-list .error-order a {
+    background: #FF431E;
+}
+
+.subject-num-list .correct-order a {
+    background: #1ABC9C;
+}
+
+.subject-num-list a.done-hover, .subject-num-list a:hover {
+    margin: -6px 0;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.subject-num-list a {
+    display: block;
+    color: #FFF;
+    background: #C1C1C1;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.result-question-box {
+    padding: 30px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.question-main {
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.question-number {
+    background: #1ABC9C;
+    border-radius: 12px;
+    float: left;
+    color: #FFF;
+    padding: 5px 7px;
+    line-height: 12px;
+    font-weight: 400;
 }
