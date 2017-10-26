@@ -16,7 +16,8 @@ window.onload = function () {
  if (nowItem<0) {nowItem = 0}
  var nowRadio = -1
  var itemNum = itemsA.length
- window.answer = [3,3,3,3]
+ var answer = localStorage.getItem('answer').split(',');
+ console.log(answer)
  // 渲染数据
  resetTopic(nowItem,itemsA);
  addClassName(subjectListA[nowItem],'done-hover')
@@ -28,7 +29,7 @@ window.onload = function () {
      } else {
        subjectListLi[i].className = 'error-order'
      }
-     console.log(window.answer[i])
+     console.log(answer[i])
  }
 
   //重置题目
@@ -42,8 +43,8 @@ window.onload = function () {
      addClassName(radios[content.correct], 'checked')
      correctAnswer.innerHTML = optionCon[content.correct]
      analysis.innerHTML = content.analysis
-     if (window.answer[num] > 0){
-       yourAnswer.innerHTML = optionCon[window.answer[num]]
+     if (answer[num] >= 0){
+       yourAnswer.innerHTML = optionCon[answer[num]]
      } else {
        yourAnswer.innerHTML = '空'
      }

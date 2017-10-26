@@ -9,6 +9,30 @@ window.onload = function () {
                    {name:"立体几何",rank:4},
                    {name:"排列组合",rank:3}]
 
+   /** 初始化 **/				   
+   var timeSpan = document.getElementById('time')
+   var topicNum = document.getElementById('topicNum')
+   var score = document.getElementsByClassName('score')
+   var correctNum = 0
+   var itemNum = itemsA.length
+   var answer = localStorage.getItem('answer').split(',');
+   timeSpan.innerHTML = localStorage.getItem('time')
+   
+    for(var i = 0; i < itemNum; i++){
+     if ( itemsA.content[i].correct == answer[i] ) {
+       correctNum ++
+     }
+    }
+   
+   for(var i = 0 ; i < score.length; i++){
+	   score[i].innerHTML = Math.ceil(100 * correctNum/itemNum)
+   }	  
+
+   topicNum.innerHTML = correctNum + '/' + itemNum  
+   
+   
+   
+
    /** 画圆 **/
    var startR = 15
    var x = 150

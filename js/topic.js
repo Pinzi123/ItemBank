@@ -30,9 +30,9 @@ window.onload = function () {
  var nowItem = 0
  var nowRadio = -1
  var itemNum = itemsA.length
- window.answer = []
+ var answer = []
  for (var i = 0; i < itemsA.length; i++) {
-   window.answer[i]=-1
+   answer[i]=-1
  }
  // 渲染数据
  resetTopic(nowItem,itemsA);
@@ -55,7 +55,7 @@ window.onload = function () {
 		 removeClassName(icons[i],' selected');
 		 if(nowselect == icons[i]){
 			 nowRadio = i
-			 window.answer[nowItem] = nowRadio
+			 answer[nowItem] = nowRadio
 		 }
 	 }
 	  nowselect.className =  nowselect.className + ' selected';
@@ -66,7 +66,7 @@ window.onload = function () {
 
   bindEvent(pages, 'click', 'SPAN', function(e) {
 	 for(var i = 0; i < pageSpan.length; i++){
-		 if(window.answer[i]<0){
+		 if(answer[i]<0){
 		  removeClassName(pageSpan[i],' checked');
 		 }
 		 if(e.target == pageSpan[i]){
@@ -92,7 +92,7 @@ window.onload = function () {
 
   bindEvent(submitDiv[1], 'click', function(e) {
 	  if(nowItem < (itemNum-1)){
-	    if(window.answer[nowItem]<0){
+	    if(answer[nowItem]<0){
 		  removeClassName(pageSpan[nowItem],' checked');
 		 }
 	    nowItem = nowItem + 1
@@ -125,8 +125,8 @@ window.onload = function () {
 	 for(var i = 0; i < icons.length; i++){
 		   removeClassName(icons[i],' selected')
 	 }
-	 if (window.answer[num]>0){
-		 addClassName(icons[window.answer[num]], 'selected')
+	 if (answer[num]>0){
+		 addClassName(icons[answer[num]], 'selected')
 	 }
 	 // 更改题目内容
 	 var content = items.content[num]
@@ -162,8 +162,10 @@ window.onload = function () {
 
   //算分
   function showRecord(){
-    //console.log(window.answer)
-    window.location.href="report.html?answer="+window.answer
+    //console.log(answer)
+	localStorage.setItem('answer',answer.toString())
+	localStorage.setItem('time',document.getElementsByClassName('time-text')[0].innerHTML)
+    window.location.href="report.html"
 	  // record.style.display = 'block'
 	  // hide.style.display = 'block'
 	  // var pages = document.getElementsByClassName('pages')[1]
